@@ -7,7 +7,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <title>Personal page</title>
 </head>
@@ -15,14 +15,14 @@
     <!--TODO: move header to a more general page. "Profile" page and include specific profiles to that one page ? -->
     <header class="profileViewHeader">
         <!--Bocuse logo-->
-        <h1>MyBocuse</h1>
+        <p>MyBocuse</p>
         <!--Profile logo to go ot profile view-->
     </header>
 <main>
-    <h1>Hello chef @[user]!</h1>
+    <p>Hello chef @[user]!</p>
 
     <div class="attendances">
-        <h1 class="attendancesTitle">Attendances</h1>
+        <p class="attendancesTitle">Attendances</p>
         <p>You can consult student attendances here.</p>
         <div class="studentAttendanceDiv">
             <p class="studentName">[STUDENT NAME]</p>
@@ -40,7 +40,7 @@
     </div>
 
     <div class="studentProfiles">
-        <h1>Access to student profiles</h1>
+        <p>Access to student profiles</p>
 
         <div class="studentProfileCard">
             <!--student image-->
@@ -51,7 +51,7 @@
 
 
     <div class="myRecipes">
-        <h1 class="myRecipesTitle">My Recipes</h1>
+        <p class="myRecipesTitle">My Recipes</p>
         <p>There are [NUMBER] recipes so far:</p>
         <div class="recipesTitle">[Recipe Title 1]</div>
         <div class="recipesTitle">[Recipe Title 2]</div>
