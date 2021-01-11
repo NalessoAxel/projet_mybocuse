@@ -31,7 +31,7 @@
         <div class="myRecipes">
             <div class="myRecipesHeader">
                 <p>My Recipes</p>
-                <button class="addRecipe">+</p> <!--Will link to "add a recipe" window or page-->
+                <button class="addRecipe">+</button> <!--Will link to "add a recipe" window or page-->
             </div>
             <p>You presented [NUMBER] recipes so far:</p>
             <ol>
