@@ -7,41 +7,41 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <title>Personal page</title>
+    <link rel="stylesheet" href="../style.css">
+    <title>My bocuse student profil</title>
 </head>
 <body>
 
-<header class="profileViewHeader">
-    <!--Bocuse logo-->
-    <p>MyBocuse</p>
-    <!--Profile logo to go ot profile view-->
-</header>
-    <main>
-        <p>Hello @[user]!</p>
 
-        <div class="attendances">
-            <p class="attendancesTitle">Attendances</p>
-            <p>Please encode your attendance to the bootcamp by clicking the right button.</p>
-            <button class="arrival">Arrival</button>
-            <button class="departure">Departure</button>
-        </div>
+<?php 
+include 'navbar.php';
+?>
+ <section class="section">
+  
+  <div class="container is-flex is-flex-direction-row is-align-items-center">
+      <figure class="image is-96x96">
+    <img class="is-rounded" src="../assets/Ellipse1.svg" alt="profil pic chef">
+    </figure>
+    <p class="ml-2">Hello @username</p>
+  </div>
+</section>
+ <section class="section is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-space-between">
+    
+    <div class="container card-pointage-student is-flex is-flex-direction-column is-align-items-center">
+        <h3 class="title is-3 has-text-black has-text-centered">Pointages</h3>
+        <h3 class="subtitle is-4 has-text-black has-text-centered">Please check the right button</h3>
+        <button class="button pointage">ARRIVAL</button>
+        <button class="button pointage">DEPARTURE</button>
+        
+    </div> 
 
-        <div class="myRecipes">
-            <div class="myRecipesHeader">
-                <p>My Recipes</p>
-                <button class="addRecipe">+</button> <!--Will link to "add a recipe" window or page-->
-            </div>
-            <p>You presented [NUMBER] recipes so far:</p>
-            <ol>
-                <li>Test recipe 1</li>
-                <li>Test recipe 2</li>
-            </ol>
-            <button class="allRecipes">See all Recipes</button>
-        </div>
+</section>
 
-    </main>
+
+<?php 
+include 'footer.php';
+?>
 </body>
 
 </html>

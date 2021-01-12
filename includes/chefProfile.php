@@ -38,16 +38,25 @@
             <h3 class="title is-3 has-text-black">Student Profil</h3>
 
             <div class="container profil-acces is-flex is-flex-direction-row is-align-items-center ">
+            <figure class="image is-64x64">
+            <img class="is-rounded" src="../assets/Ellipse1.svg" alt="profil pic chef">
+            </figure>
             <p class="title is-4 has-text-black m-0">Student Profil Name</p>
             <a href="" target="_blank"> <i class="far fa-user-circle fa-2x ml-3"></i></a>
             </div>
 
             <div class="container profil-acces is-flex is-flex-direction-row is-align-items-center">
+            <figure class="image is-64x64">
+            <img class="is-rounded" src="../assets/Ellipse1.svg" alt="profil pic chef">
+            </figure>
             <p class="title is-4 has-text-black m-0">Student Profil Name</p>
             <a href="" target="_blank"> <i class="far fa-user-circle fa-2x ml-3"></i></a>
             </div>
 
             <div class="container profil-acces is-flex is-flex-direction-row is-align-items-center">
+            <figure class="image is-64x64">
+            <img class="is-rounded" src="../assets/Ellipse1.svg" alt="profil pic chef">
+            </figure>
             <p class="title is-4 has-text-black m-0">Student Profil Name</p>
             <a href="" target="_blank"> <i class="far fa-user-circle fa-2x ml-3"></i></a>
             </div>
