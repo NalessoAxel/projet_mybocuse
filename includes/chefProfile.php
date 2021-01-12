@@ -12,5 +12,19 @@
     <title></title>
 </head>
 <body>
+<<<<<<< Updated upstream
     
+=======
+<?php 
+include 'navbar.php';
+?>
+
+<?php 
+include 'footer.php';
+?>
+
+
+
+</body>
+>>>>>>> Stashed changes
 </html>
