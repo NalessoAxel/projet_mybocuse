@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+body {
+    background: #A8A8A8;
+}
+/* NAVBAR */
+
+nav.navbar {
+    width: 1440px;
+    height: 169px;
+    background-color: #463F3A;
+   
+}
+.navbar-brand img {
+    border-radius: 110px 110px 0px 110px;  
+}
+.title {
+    font-size: 72px;
+    color: #FCFBFB;
+    line-height: 85px;
+    display: flex;
+    justify-content: center;
+    
+}
+.navbar-end {
+    margin-right: 50px;
+}
+.bigblanc {
+    width: 300px;
+    height: 300px;
+}
+/* CONNEXIONS PAGE */
+
+
+button {
+    width: 551px;
+    height: 94px;
+}
+button:hover{
+    background-color: #808080;
+    
+}
+/* LOGIN FORM */
+.bgimg{
+    background-image: url(/projet_mybocuse/assets/form.svg);
+    min-height: 590px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin: 53px 0;
+}
+.container input {
+    border-radius: 70px;
+    background-color: #E1DFDF;
+    width: 388px;
+    height: 48px;
+    margin-top: 10px;
+}
+.container button{
+    width: 271px;
+    height: 53px;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+}
+
+/* PROFIL CHEF */
+
+.container {
+    flex-grow: initial;
+    margin: 0 0;
+}
+.card-pointage {
+    background-image: url(/projet_mybocuse/assets/bgcard.svg);
+    height: 540px;
+    width: 440px;
+    background-repeat: no-repeat;
+    position: relative;
+   
+}
+.container input {
+    width: 328px;
+    height: 85px;
+    margin: 35px;
+}
+
+.card-profil {
+    background-image: url(/projet_mybocuse/assets/bgcard.svg);
+    height: 540px;
+    width: 440px;
+    background-repeat: no-repeat;
+    position: relative;   
+}
+.card-reciepe {
+    background-image: url(/projet_mybocuse/assets/bgcard.svg);
+    height: 540px;
+    width: 440px;
+    background-repeat: no-repeat;
+    position: relative; 
+}
+h3.title {
+    text-decoration: underline;
+}
+.container.profil-acces {
+    margin-bottom: 82px;
+}
+
+
+
+/* FOOTER */
+
+.footer {
+    width: 1440px;
+    height: 40px;
+    background-color: #463F3A;
+    
+}
+.footer img {
+    padding: 10px 10px;
+}
+
