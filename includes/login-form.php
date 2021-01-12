@@ -40,15 +40,9 @@
     <title>My bocuse</title>
 </head>
 <body>
-<nav class="navbar is-flex is-align-items-center" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand is-flex is-justify-content-flex-start is-align-items-center">
-      <figure class="image is-128x128">
-        <img src="../assets/paul_bocuse.jpeg" alt="mybocuse logo">
-      </figure>
-    </div>
-    <h1 class="title is-justify-content-center">My Bocuse</h1>
-    </div>
-  </nav>
+<?php 
+include 'navbar.php';
+?>
 
 <div class="bgimg">
     
@@ -61,16 +55,8 @@
         <button class="button is-rounded mt-5" type="submit" value="login" name="submit">Sign up
     </form>
     </div>
-    <footer class="footer">
-    <div class="container is-flex is-justify-content-space-between is-align-items-center">
-      <p class="has-text-white">
-        Fair use disclaimer, this website is for educational purpose only.
-      </p>
-      <figure class="image is-96x96 ">
-        <img src="../assets/becode_logo.svg" alt="logo becode">
-      </figure>
-    </div>
-
-  </footer>
+    <?php 
+include 'footer.php';
+?>
 </body>
 </html>

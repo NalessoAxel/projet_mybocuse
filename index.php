@@ -37,7 +37,7 @@
         Fair use disclaimer, this website is for educational purpose only.
       </p>
       <figure class="image is-96x96 ">
-        <img src="assets/becode_logo." alt="logo becode">
+        <img src="assets/becode_logo.svg" alt="logo becode">
       </figure>
     </div>
 
