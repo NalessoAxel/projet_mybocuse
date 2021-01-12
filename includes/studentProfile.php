@@ -8,6 +8,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <title>My bocuse student profil</title>
 </head>
@@ -35,6 +36,15 @@ include 'navbar.php';
         <button class="button pointage">DEPARTURE</button>
         
     </div> 
+    <div class="container card-pointage-student is-flex is-flex-direction-column is-align-items-center">
+        <div class="container-title is-flex is-flex-direction-row is-align-items-center">
+        <h3 class="title is-3 has-text-black m-0">Reciepe</h3>
+        <i class="fas fa-plus fa-2x ml-4"></i>
+        </div>
+        <input class="input" type="text" placeholder="Text input">
+            <input class="input" type="text" placeholder="Text input">
+            <input class="input" type="text" placeholder="Text input">
+        </div> 
 
 </section>
 
