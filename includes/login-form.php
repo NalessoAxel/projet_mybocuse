@@ -7,8 +7,6 @@
 
         include 'dbConnexion.php';
 
-        $db = new PDO('mysql:host=localhost;dbname=myBocuse',$db_username,$db_password);
-
         $sql = "SELECT * FROM people where email= ? ";
         $result = $db->prepare($sql);
         $result->execute(array($_POST['email']));
