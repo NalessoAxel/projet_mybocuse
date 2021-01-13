@@ -41,9 +41,73 @@ include 'navbar.php';
         <h3 class="title is-3 has-text-black m-0">Reciepe</h3>
         <i class="fas fa-plus fa-2x ml-4"></i>
         </div>
-        <input class="input" type="text" placeholder="Text input">
-            <input class="input" type="text" placeholder="Text input">
-            <input class="input" type="text" placeholder="Text input">
+        <button class="button is-medium" id="button"> Reciepe</button>
+            <div class="modal" id="page-modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+            <div class="card">
+                            <div class="card-content">
+                              <p class="title">
+                                "Here the title of the reciepe"
+                              </p>
+                              <p class="subtitle">
+                                "Here the date of the reciepe" 
+                              </p>
+                              <p> 
+                                "Name of the student"
+
+                              </p>
+                              <button class="button is-small">See full reciepe</button>
+                            </div>
+                      </div>
+            </div>
+            <button class="modal-close is-large" aria-label="close"></button>
+            </div>
+            <button class="button is-medium" id="button2">Reciepe</button>
+            <div class="modal" id="page-modal2">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+            <div class="card">
+                            <div class="card-content">
+                              <p class="title">
+                                "Here the title of the reciepe"
+                              </p>
+                              <p class="subtitle">
+                                "Here the date of the reciepe" 
+                              </p>
+                              <p> 
+                                "Name of the student"
+
+                              </p>
+                              <button class="button is-small">See full reciepe</button>
+                            </div>
+                      </div>
+            </div>
+            <button class="modal-close is-large" aria-label="close"></button>
+            </div>
+            <button class="button is-medium" id="button3">Reciepe</button>
+            <div class="modal" id="page-modal3">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+            <div class="card">
+                            <div class="card-content">
+                              <p class="title">
+                                "Here the title of the reciepe"
+                              </p>
+                              <p class="subtitle">
+                                "Here the date of the reciepe" 
+                              </p>
+                              <p> 
+                                "Name of the student"
+
+                              </p>
+                              <button class="button is-small">See full reciepe</button>
+                            </div>
+                      </div>
+            </div>
+            <button class="modal-close is-large" aria-label="close"></button>
+            </div>
+        
         </div> 
 
 </section>
@@ -53,5 +117,6 @@ include 'navbar.php';
 include 'footer.php';
 ?>
 </body>
+<script src="../js/modal.js"></script>
 
 </html>

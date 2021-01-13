@@ -81,6 +81,7 @@
                                 "Name of the student"
 
                               </p>
+                              <button class="button is-small">See full reciepe</button>
                             </div>
                       </div>
             </div>
@@ -102,6 +103,7 @@
                                 "Name of the student"
 
                               </p>
+                              <button class="button is-small">See full reciepe</button>
                             </div>
                       </div>
             </div>
@@ -123,6 +125,7 @@
                                 "Name of the student"
 
                               </p>
+                              <button class="button is-small">See full reciepe</button>
                             </div>
                       </div>
             </div>
