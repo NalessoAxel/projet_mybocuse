@@ -1,11 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+* {
+    font-family: 'rubik';
+}
+
 body {
     background: #A8A8A8;
+    
+
 }
 /* NAVBAR */
 
 nav.navbar {
-    width: 1440px;
+
+   
+
     height: 169px;
     background-color: #463F3A;
    
@@ -53,7 +62,9 @@ button:hover{
     background-color: #E1DFDF;
     width: 388px;
     height: 48px;
-    margin-top: 20px;
+
+    margin-top: 10px;
+
 }
 .container button{
     width: 271px;
@@ -65,6 +76,104 @@ button:hover{
     line-height: 28px;
     text-align: center;
 }
+
+
+/* PROFIL CHEF */
+
+.container {
+    flex-grow: initial;
+    margin: 0 0;
+}
+.card-pointage {
+    background-image: url(/projet_mybocuse/assets/bgcard.svg);
+    height: 540px;
+    width: 440px;
+    background-repeat: no-repeat;
+    position: relative;
+   
+}
+.container input {
+    width: 328px;
+    height: 85px;
+    margin: 25px;
+}
+
+.card-profil {
+    background-image: url(/projet_mybocuse/assets/bgcard.svg);
+    height: 540px;
+    width: 440px;
+    background-repeat: no-repeat;
+    position: relative;   
+}
+.card-reciepe {
+    background-image: url(/projet_mybocuse/assets/bgcard.svg);
+    height: 540px;
+    width: 440px;
+    background-repeat: no-repeat;
+    position: relative; 
+}
+h3.title {
+    text-decoration: underline;
+}
+.container.profil-acces {
+    margin-bottom: 62px;
+}
+.modal-card, .modal-content {
+    
+    overflow: auto;
+    position: relative;
+  
+    top: 30%;
+}
+#page-modal > div.modal-content > div > div > p.title {
+    font-size: 72px;
+    line-height: 85px;
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+.button.is-medium{
+    width: 300px;
+    height: 80px;
+    background: #F2F2F2;
+    border-radius: 50px;
+    margin: 30px 0;
+}
+.button.is-small {
+    background-color: #C4C4C4;
+    width: 100px;
+    height: 30px;
+    border-radius: 50px;
+    position: absolute;
+    left: 80%;
+    bottom: 7%;
+}
+a {
+    color: black;
+}
+a:hover {
+    color:#463F3A;
+}
+
+/* STUDENT PROFIL */
+.card-pointage-student {
+    margin-bottom: 43px;
+    background-image: url(/projet_mybocuse/assets/bgcard.svg);
+    height: 540px;
+    width: 440px;
+    background-repeat: no-repeat;
+    position: relative; 
+}
+button.pointage {
+    width: 252.68px;
+    height: 60px;
+    background: #F2F2F2;
+    border-radius: 50px;
+    margin: 50px 0;
+}
+
+
+
 /* FOOTER */
 
 .footer {
@@ -74,6 +183,8 @@ button:hover{
     
 }
 .footer img {
-    padding: 20px 20px;
+
+    padding: 10px 10px;
+
 }
 
