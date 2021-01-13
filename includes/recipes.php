@@ -27,21 +27,21 @@
         <div class="field">
         <label class="label">Topic of the reciepe</label>
         <div class="control">
-        <input class="input reciepe" type="text" placeholder="Text input">
+        <input class="input reciepe" type="text" placeholder="Topic">
         </div>
         
    </div>
    <div class="field">
         <label class="label">Date</label>
         <div class="control">
-        <input class="input reciepe" type="text" placeholder="Text input">
+        <input class="input reciepe" type="text" placeholder="13/01/2021">
         </div>
         
    </div>
    <div class="field">
         <label class="label">Your Name</label>
         <div class="control">
-        <input class="input reciepe" type="text" placeholder="Text input">
+        <input class="input reciepe" type="text" placeholder="Robert De Noël">
         </div>
         
    </div>
