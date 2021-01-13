@@ -1,16 +1,39 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
     <title>All Recipes</title>
 </head>
-<body>
-<p>All recipes from myBocuse</p>
 
-<?php
+<body>
+    <?php include 'navbar.php'; ?>
+
+    <section class="section">
+        <div class="container is-flex is-flex-direction-row is-align-items-center">
+            <figure class="image is-96x96">
+                <img class="is-rounded" src="../assets/Ellipse1.svg" alt="profil pic chef">
+            </figure>
+            <p class="ml-2">Hello @username</p>
+        </div>
+    </section>
+    
+
+        
+            
+                <!-- <div class="media-left">
+                    <figure class="image is-128x128">
+                        <img class="is-rounded" src="../assets/tiramisu.jpg" alt="Placeholder image">
+                    </figure>
+                </div> -->
+
+                <?php
 //session_start(); //NOTE: nécessaire ou pas ?
 header('Content-type: text/html; charset=UTF-8');
 try {
@@ -24,12 +47,18 @@ try {
     $request->execute();
 
     while ($data = $request->fetch()) {
-        echo '<div>';
-        echo '<p>' . $data['topic_recip'] . '</p>';
+       
+        echo '<div class="container-accordion">';
+        echo' <div class="accordion-content">';
+      
+        echo '<button class="accordion">' . $data['topic_recip'] . '</button>';
         echo '<p>' . nl2br($data['fullRecipe']) . '-' . $data['date_recip'] . '</p>';
-        echo '<p>' . $data['firstname'] . ' ' . $data['lastname'] . '</p>';
-
+        echo '<p class="subtitle is-6">' . $data['firstname'] . ' ' . $data['lastname'] . '</p>';
+        
         echo '</div>';
+        echo '</div>';
+       
+       
     }
 
     //}
@@ -40,3 +69,14 @@ catch(Exception $e){
     die('Error: '.$e->getMessage());
 }
 ?>
+
+
+
+
+    <?php include 'footer.php'; ?>
+
+
+<scipt src="../accordion.js"></script>
+</body>
+
+</html>
