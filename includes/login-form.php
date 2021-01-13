@@ -3,27 +3,25 @@
     session_start();
     if (isset($_POST['submit'])) {
         $email = $_POST['email'];
-        $pass = $_POST['pass'];
+        $pass = sha1($_POST['pass']);
 
-        $db = new PDO('mysql:host=localhost;dbname=loginsystem', 'root', '');
+        include 'dbConnexion.php';
 
-        $sql = "SELECT * FROM user where email='$email' ";
+        $sql = "SELECT * FROM people where email= ? ";
         $result = $db->prepare($sql);
-        $result->execute();
+        $result->execute(array($_POST['email']));
 
         if ($result->rowCount() > 0) {
             $data = $result->fetchAll();
-            if (password_verify($pass, $data[0]["password"])) {
-                echo "Conexion effectué";
+            if ($pass === $data[0]["passwords"]) {
+                // echo "Login successful";
                 $_SESSION['email'] = $email;
+            } else {
+                // echo "Login failed, wrong credentials";
             }
         }
         else{
-            // $pass = password_hash($pass, PASSWORD_DEFAULT);
-            // $sql = "INSERT INTO user (email, password) VALUES ('$email', '$pass')";
-            // $req = $db->prepare($sql);
-            // $req->execute(); 
-            echo "Mot de passe incorrect";
+            //echo "Unknown credentials";
         }
     }
 
