@@ -51,10 +51,11 @@ include 'navbar.php';
                                 "Here the title of the reciepe"
                               </p>
                               <p class="subtitle">
-                                "Here the date of the reciepe" 
+                              "Name of the student"
                               </p>
                               <p> 
-                                "Name of the student"
+                                
+                                "Here the date of the reciepe" 
 
                               </p>
                               <button class="button is-small">See full reciepe</button>
@@ -73,10 +74,11 @@ include 'navbar.php';
                                 "Here the title of the reciepe"
                               </p>
                               <p class="subtitle">
-                                "Here the date of the reciepe" 
+                              "Name of the student"
                               </p>
                               <p> 
-                                "Name of the student"
+                               
+                                "Here the date of the reciepe" 
 
                               </p>
                               <button class="button is-small">See full reciepe</button>
@@ -95,10 +97,11 @@ include 'navbar.php';
                                 "Here the title of the reciepe"
                               </p>
                               <p class="subtitle">
-                                "Here the date of the reciepe" 
+                                
+                                "Name of the student"
                               </p>
                               <p> 
-                                "Name of the student"
+                              "Here the date of the reciepe" 
 
                               </p>
                               <button class="button is-small">See full reciepe</button>
