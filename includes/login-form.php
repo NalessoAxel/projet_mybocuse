@@ -19,21 +19,29 @@
             if ($pass === $data[0]["passwords"]) {
                 echo "Login successful";
                 $_SESSION['email'] = $email;
-            } else {
+                $_SESSION['id'] = $data[0]["id"];
+                $_SESSION['type'] = $data[0]["account_type"];
+                $_SESSION['firstname'] = $data[0]["firstname"];
+                $_SESSION['lastname'] = $data[0]["lastname"];
+                if ($_SESSION['type'] === "chef") {
+                   header("location:chefProfile.php");
+                } else {
+                    header("location:studentProfile.php");
+                }
+              } else {
                 $_SESSION['wrongCredentials'] = array("Your username or password was incorrect.");
-            }
-        }
-        else{
+                }
+         } else{
             $_SESSION['unknownCredentials'] = array('Unknown credentials. 
-            Please check your credentials or contact your chef.');
-
-        }
+            Please check your credentials or contact your chef.');   
+         }
     }
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,10 +49,11 @@
     <link rel="stylesheet" href="../style.css">
     <title>My bocuse</title>
 </head>
+
 <body>
-<?php 
-include 'navbar.php';
-?>
+    <?php include 'navbar.php'; ?>
+
+    <div class="bgimg">
 
 <div class="bgimg">
     
@@ -77,6 +86,7 @@ include 'navbar.php';
 include 'footer.php';
 
 ?>
-<!--<script src="../script.js"></script>-->
+
 </body>
+
 </html>
