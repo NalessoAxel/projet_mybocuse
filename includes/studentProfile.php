@@ -1,6 +1,9 @@
 <!--TODO: move head, header & footer to a more general page. "Profile" page and include specific profiles to that one page ? -->
 <?php
     session_start();
+    if(!isset($_SESSION['id'])){
+    header('Location:login-form.php');
+    }
 ?>
 
 <!doctype html>

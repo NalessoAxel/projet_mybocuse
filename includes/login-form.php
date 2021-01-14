@@ -17,7 +17,6 @@
         if ($result->rowCount() > 0) {
             $data = $result->fetchAll();
             if ($pass === $data[0]["passwords"]) {
-                echo "Login successful";
                 $_SESSION['email'] = $email;
                 $_SESSION['id'] = $data[0]["id"];
                 $_SESSION['type'] = $data[0]["account_type"];
