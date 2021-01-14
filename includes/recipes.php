@@ -32,19 +32,24 @@
         
    </div>
    <div class="field">
-        <label class="label">Date</label>
+        <label class="label">Description</label>
         <div class="control">
-        <input class="input-reciepe" type="text" placeholder="13/01/2021">
+        <input class="input-reciepe" type="text" placeholder="Description of your reciepe">
         </div>
         
    </div>
    <div class="field">
-        <label class="label">Your Name</label>
+        <label class="label">Add Full reciepe</label>
         <div class="control">
-        <input class="input-reciepe" type="text" placeholder="Robert De Noël">
-        </div>
-        
+        <textarea class="input-reciepe" type="text" placeholder="Ingredients and preparation" ></textarea>
+        </div>        
    </div>
+   <div class="field">
+        <label class="label">Date</label>
+        <div class="control">
+        <input class="input-reciepe" type="text" placeholder="14/01/2021">
+        </div>
+    </div>
         <a href="studentProfile.php"><button class="button-add mt-4">Add reciepe</button></a>
         
     </div> 
