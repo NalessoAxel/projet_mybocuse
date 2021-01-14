@@ -1,4 +1,7 @@
 <!--TODO: move head, header & footer to a more general page. "Profile" page and include specific profiles to that one page ? -->
+<?php
+    session_start();
+?>
 
 <!doctype html>
 <html lang="en">
@@ -24,7 +27,7 @@ include 'navbar.php';
       <figure class="image is-96x96">
     <img class="is-rounded" src="../assets/Ellipse1.svg" alt="profil pic chef">
     </figure>
-    <p class="ml-2">Hello @username</p>
+    <p class="ml-2">Hello <?php echo $_SESSION['firstname']; ?></p>
   </div>
 </section>
  <section class="section is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-space-around">

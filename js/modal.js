@@ -1,38 +1,20 @@
-const button = document.getElementById('button')
-const modal = document.getElementById('page-modal')
-const close = document.getElementsByClassName('modal-close')[0]
+let modals = document.getElementsByClassName('modal');
+let buttons = document.getElementsByClassName('modal-open');
+const closeButtons = document.getElementsByClassName('modal-close');
+const modalBgs = document.getElementsByClassName('modal-background');
 
-button.onclick = function () {
-    modal.style.display = 'block'
-}
-close.onclick = function () {
-    modal.style.display = 'none'
-}
-
-const button2 = document.getElementById('button2')
-const modal2 = document.getElementById('page-modal2')
-button2.onclick = function () {
-    modal.style.display = 'block'
-}
-
-
-const button3 = document.getElementById('button3')
-const modal3 = document.getElementById('page-modal3')
-button3.onclick = function () {
-    modal.style.display = 'block'
-}
-
-
-
-button.onclick = function () {
-    modal.style.display = 'block'
-}
-close.onclick = function () {
-    modal.style.display = 'none'
-}
-
-window.onclick = function(event) {
-    if(event.target.className == 'modal-background') {
-        modal.style.display = 'none'
-    }
+for(let i =0; i<modals.length; i++){
+    const modal = modals[i];
+    const button = buttons[i];
+    const closeButton = closeButtons[i];
+    const background = modalBgs[i];
+    button.addEventListener('click', function (){
+        modal.style.display = 'block';
+    })
+    background.addEventListener('click', function (){
+        modal.style.display = 'none';
+    })
+    closeButton.addEventListener('click', function (){
+        modal.style.display = 'none';
+    })
 }
