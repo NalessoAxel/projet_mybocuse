@@ -1,3 +1,25 @@
+<?php
+
+    session_start();
+    echo $_SESSION['id'];
+    
+    if (isset($_POST['submit'])) {
+        $titre = $_POST['topic'];
+        $description = $_POST['description'];
+        $ingredient = $_POST['ingredient'];
+        $date = $_POST['date'];
+        $idstudent = $_SESSION['id'];
+
+        include 'dbConnexion.php';
+
+        $sql = "INSERT INTO recipe (topic_recip, description, fullRecipe, date_recip, idStudent) VALUES ('$titre', '$description', '$ingredien', '$date', '$idstudent')";
+        $req = $db->prepare($sql);
+        $req->execute(); 
+
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,36 +38,53 @@
       <figure class="image is-96x96">
     <img class="is-rounded" src="../assets/Ellipse1.svg" alt="profil pic chef">
     </figure>
-    <p class="ml-2">Hello @username</p>
+    <p class="ml-2">Hello <?php echo $_SESSION['firstname']; ?></p>
   </div>
 </section>
 <section class="section is-flex  is-justify-content-center">
     
-    <div class="container card-reciepe is-flex is-flex-direction-column is-align-items-center">
+    <div class="container-reciepes card-reciepe is-flex is-flex-direction-column is-align-items-center">
         <h3 class="title is-3 has-text-black has-text-centered">Add your reciepe here</h3>
         
         <div class="field">
         <label class="label">Topic of the reciepe</label>
         <div class="control">
-        <input class="input reciepe" type="text" placeholder="Topic">
+        <input class="input-reciepe" type="text" name="topic" placeholder="Topic">
         </div>
         
+   </div>
+   <div class="field">
+        <label class="label">Description</label>
+        <div class="control">
+
+        <input class="input-reciepe" type="text" placeholder="Description of your reciepe">
+
+        <input class="input-reciepe" type="text" name="description" placeholder="Description of your reciepe">
+
+        </div>
+        
+   </div>
+   <div class="field">
+        <label class="label">Add Full reciepe</label>
+        <div class="control">
+
+        <textarea class="input-reciepe" type="text" placeholder="Ingredients and preparation" ></textarea>
+
+        <textarea class="input-reciepe" type="text" name="ingredient" placeholder="Ingredients and preparation" ></textarea>
+
+        </div>        
    </div>
    <div class="field">
         <label class="label">Date</label>
         <div class="control">
-        <input class="input reciepe" type="text" placeholder="13/01/2021">
+
+        <input class="input-reciepe" type="text" placeholder="14/01/2021">
+
+        <input class="input-reciepe" type="text" name="date" placeholder="2021-01-14">
+
         </div>
-        
-   </div>
-   <div class="field">
-        <label class="label">Your Name</label>
-        <div class="control">
-        <input class="input reciepe" type="text" placeholder="Robert De Noël">
-        </div>
-        
-   </div>
-        <button class="button add">Add reciepe</button>
+    </div>
+        <a href="studentProfile.php"><button class="button-add mt-4">Add reciepe</button></a>
         
     </div> 
 </section>

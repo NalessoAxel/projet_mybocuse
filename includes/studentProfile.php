@@ -1,4 +1,7 @@
 <!--TODO: move head, header & footer to a more general page. "Profile" page and include specific profiles to that one page ? -->
+<?php
+    session_start();
+?>
 
 <!doctype html>
 <html lang="en">
@@ -24,7 +27,7 @@ include 'navbar.php';
       <figure class="image is-96x96">
     <img class="is-rounded" src="../assets/Ellipse1.svg" alt="profil pic chef">
     </figure>
-    <p class="ml-2">Hello @username</p>
+    <p class="ml-2">Hello <?php echo $_SESSION['firstname']; ?></p>
   </div>
 </section>
  <section class="section is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-space-between">
@@ -39,7 +42,7 @@ include 'navbar.php';
     <div class="container card-pointage-student is-flex is-flex-direction-column is-align-items-center">
         <div class="container-title is-flex is-flex-direction-row is-align-items-center">
         <h3 class="title is-3 has-text-black m-0">Reciepe</h3>
-        <i class="fas fa-plus fa-2x ml-4"></i>
+          <a href="recipes.php"><i class="fas fa-plus fa-2x ml-4"></i></a>
         </div>
         <button class="button is-medium" id="button"> Reciepe</button>
             <div class="modal" id="page-modal">
@@ -51,10 +54,11 @@ include 'navbar.php';
                                 "Here the title of the reciepe"
                               </p>
                               <p class="subtitle">
-                                "Here the date of the reciepe" 
+                              "Name of the student"
                               </p>
                               <p> 
-                                "Name of the student"
+                                
+                                "Here the date of the reciepe" 
 
                               </p>
                               <button class="button is-small">See full reciepe</button>
@@ -73,10 +77,11 @@ include 'navbar.php';
                                 "Here the title of the reciepe"
                               </p>
                               <p class="subtitle">
-                                "Here the date of the reciepe" 
+                              "Name of the student"
                               </p>
                               <p> 
-                                "Name of the student"
+                               
+                                "Here the date of the reciepe" 
 
                               </p>
                               <button class="button is-small">See full reciepe</button>
@@ -95,10 +100,11 @@ include 'navbar.php';
                                 "Here the title of the reciepe"
                               </p>
                               <p class="subtitle">
-                                "Here the date of the reciepe" 
+                                
+                                "Name of the student"
                               </p>
                               <p> 
-                                "Name of the student"
+                              "Here the date of the reciepe" 
 
                               </p>
                               <button class="button is-small">See full reciepe</button>
