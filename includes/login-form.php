@@ -53,16 +53,15 @@
 <body>
     <?php include 'navbar.php'; ?>
 
-    <div class="bgimg">
 
 <div class="bgimg">
     
-    <form action="" method="post" class="container is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
+    <form action="" method="post" class="container-login is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
     <img class="mt-4"src="../assets/paul_bocuse_logo_form.svg">
     <h1 class="title is-size-1 has-text-black">Login</h1>
     <h2 class="subtitle is-size-3 has-text-black">Sign up to your account</h2>
-        <input type="text" name="email" id="emailInput" placeholder="Your email">
-        <input type="password" name="pass" id="passwordInput" placeholder="Your password">
+        <input class="login" type="text" name="email" id="emailInput" placeholder="Your email">
+        <input class="login" type="password" name="pass" id="passwordInput" placeholder="Your password">
         
         <?php if (isset($_SESSION['wrongCredentials'])): ?>
             <div class="help form-errors is-danger">
