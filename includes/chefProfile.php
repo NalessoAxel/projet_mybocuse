@@ -76,17 +76,17 @@
 
             while ($data = $request->fetch()) {
 
-                echo '<button class="button is-medium modal-open" id="button">' . $data['topic_recip'] .'</button>';
+                echo '<button class="button is-medium modal-open has-text-justified is-lowercase is-size-7" id="button">' . $data['topic_recip'] .'</button>';
                 echo '<div class="modal" id="page-modal">
             <div class="modal-background" id="modal-bg"></div>
             <div class="modal-content">
             <div class="card">
                             <div class="card-content">
-                              <p class="title">' . $data['topic_recip'] . '</p>';
+                              <p class="title ">' . $data['topic_recip'] . '</p>';
                 echo '<p class="subtitle">' . $data['description'] .
                               '</p>';
                 echo '<p> ' . $data['firstname'] . ' ' . $data['lastname'] .           '</p>';
-                echo '<button class="button is-small">See full reciepe</button>
+                echo '<button class="button is-small"><a href="allRecipes.php">See full reciepe</a></button>
 
                             </div>
                       </div>

@@ -48,7 +48,7 @@
             while ($data = $request->fetch()) {
         
             echo '<div class="container-accordion">';
-            echo '<button class="accordion"><i class="fas fa-plus-circle"></i>' . $data['topic_recip'] . '</button>';
+            echo '<button class="accordion has-text-justified is-capitalized is-size-5 ml-1"><i class="fas fa-plus-circle"></i>' . $data['topic_recip'] . '</button>';
             echo '<div class="panel" style="display: none;">';
             echo '<p>' . nl2br($data['fullRecipe']) . ' <br>' . $data['date_recip'] . '</p>';
             echo '<p class="subtitle is-6">' . $data['firstname'] . ' ' . $data['lastname'] . '</p>';
