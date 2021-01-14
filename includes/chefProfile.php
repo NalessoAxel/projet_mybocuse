@@ -3,6 +3,9 @@
     if(!isset($_SESSION['id'])){
         header('Location:login-form.php');
     }
+    if($_SESSION['type'] === "apprenti"){
+        header("location:studentProfile.php");
+    }
 ?>
 
 <!doctype html>
