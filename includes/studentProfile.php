@@ -42,82 +42,38 @@ include 'navbar.php';
         <button class="button pointage">DEPARTURE</button>
         
     </div> 
-    <div class="container card-pointage-student is-flex is-flex-direction-column is-align-items-center">
-        <div class="container-title is-flex is-flex-direction-row is-align-items-center">
-        <h3 class="title is-3 has-text-black m-0">Reciepe</h3>
-          <a href="recipes.php"><i class="fas fa-plus fa-2x ml-4"></i></a>
+    <div class="container card-reciepe  is-flex is-flex-direction-column is-align-items-center">
+            <h3 class="title is-3 has-text-black">Receipes</h3>
+            <?php
+            include 'dbConnexion.php';
+            $student = $_SESSION['id'];
+            $request = $db->prepare('SELECT recipe.id, recipe.topic_recip, recipe.description,  recipe.date_recip, recipe.idStudent, people.firstname, people.lastname FROM recipe INNER JOIN people ON recipe.idStudent = $student ORDER BY recipe.id DESC LIMIT 3');
+
+            $request->execute();
+
+            while ($data = $request->fetch()) {
+
+                echo '<button class="button is-medium modal-open has-text-justified is-lowercase is-size-7" id="button">' . $data['topic_recip'] .'</button>';
+                echo '<div class="modal" id="page-modal">
+            <div class="modal-background" id="modal-bg"></div>
+            <div class="modal-content">
+            <div class="card">
+                            <div class="card-content">
+                              <p class="title ">' . $data['topic_recip'] . '</p>';
+                echo '<p class="subtitle">' . $data['description'] .
+                              '</p>';
+                echo '<p> ' . $data['firstname'] . ' ' . $data['lastname'] .           '</p>';
+                echo '<button class="button is-small"><a href="allRecipes.php">See full reciepe</a></button>
+
+                            </div>
+                      </div>
+            </div>
+            <button class="modal-close is-large" id="modal-close" aria-label="close"></button>
+            </div>';
+            }
+
+            ?>
         </div>
-        <button class="button is-medium" id="button"> Reciepe</button>
-            <div class="modal" id="page-modal">
-            <div class="modal-background"></div>
-            <div class="modal-content">
-            <div class="card">
-                            <div class="card-content">
-                              <p class="title">
-                                "Here the title of the reciepe"
-                              </p>
-                              <p class="subtitle">
-                              "Name of the student"
-                              </p>
-                              <p> 
-                                
-                                "Here the date of the reciepe" 
-
-                              </p>
-                              <button class="button is-small">See full reciepe</button>
-                            </div>
-                      </div>
-            </div>
-            <button class="modal-close is-large" aria-label="close"></button>
-            </div>
-            <button class="button is-medium" id="button2">Reciepe</button>
-            <div class="modal" id="page-modal2">
-            <div class="modal-background"></div>
-            <div class="modal-content">
-            <div class="card">
-                            <div class="card-content">
-                              <p class="title">
-                                "Here the title of the reciepe"
-                              </p>
-                              <p class="subtitle">
-                              "Name of the student"
-                              </p>
-                              <p> 
-                               
-                                "Here the date of the reciepe" 
-
-                              </p>
-                              <button class="button is-small">See full reciepe</button>
-                            </div>
-                      </div>
-            </div>
-            <button class="modal-close is-large" aria-label="close"></button>
-            </div>
-            <button class="button is-medium" id="button3">Reciepe</button>
-            <div class="modal" id="page-modal3">
-            <div class="modal-background"></div>
-            <div class="modal-content">
-            <div class="card">
-                            <div class="card-content">
-                              <p class="title">
-                                "Here the title of the reciepe"
-                              </p>
-                              <p class="subtitle">
-                                
-                                "Name of the student"
-                              </p>
-                              <p> 
-                              "Here the date of the reciepe" 
-
-                              </p>
-                              <button class="button is-small">See full reciepe</button>
-                            </div>
-                      </div>
-            </div>
-            <button class="modal-close is-large" aria-label="close"></button>
-            </div>
-        
-        </div> 
 
 </section>
 
