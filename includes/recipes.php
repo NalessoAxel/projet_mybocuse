@@ -57,7 +57,7 @@
         <label class="label">Description</label>
         <div class="control">
 
-        <input class="input-reciepe" type="text" placeholder="Description of your reciepe">
+        
 
         <input class="input-reciepe" type="text" name="description" placeholder="Description of your reciepe">
 
@@ -68,7 +68,7 @@
         <label class="label">Add Full reciepe</label>
         <div class="control">
 
-        <textarea class="input-reciepe" type="text" placeholder="Ingredients and preparation" ></textarea>
+        
 
         <textarea class="input-reciepe" type="text" name="ingredient" placeholder="Ingredients and preparation" ></textarea>
 
@@ -78,7 +78,7 @@
         <label class="label">Date</label>
         <div class="control">
 
-        <input class="input-reciepe" type="text" placeholder="14/01/2021">
+        
 
         <input class="input-reciepe" type="text" name="date" placeholder="2021-01-14">
 
