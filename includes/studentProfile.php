@@ -1,5 +1,15 @@
 <!--TODO: move head, header & footer to a more general page. "Profile" page and include specific profiles to that one page ? -->
+<?php
+    if(isset($_POST['morning']))
+    {
+        include('insertMorning.php');
+    }
+    if(isset($_POST['noon']))
+    {
+        include('insertNoon.php');
+    }
 
+?>
 <!doctype html>
 <html lang="en">
 <head>
