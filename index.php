@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-=======
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,17 +23,23 @@
 
 
   <section class="hero">
-    <div class="hero-body is-flex is-flex-direction-column is-align-items-center">
 
+    <div class="hero-body">
+      <div class="container is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
         <img src="assets/img_connexion_page.svg" alt="paul bocuse profil">
-        <a href="./includes/login-form.php"><button class="button  is-rounded mt-5"> CONNEXIONS</button></a>
-      
+        <button class="button  is-rounded mt-5">CONNEXIONS</button>
+      </div>
     </div>
 
   </section>
+
 
   <?php include 'includes/footer.php'?>
 </body>
 
 </html>
->>>>>>> Stashed changes
+
+
+
+
+

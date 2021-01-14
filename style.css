@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 * {
     font-family: 'rubik';
 }
@@ -6,11 +7,12 @@
 body {
     background: #A8A8A8;
     
+
 }
 /* NAVBAR */
 
 nav.navbar {
-   
+
     height: 169px;
     background-color: #463F3A;
    
@@ -35,9 +37,11 @@ nav.navbar {
 }
 /* CONNEXIONS PAGE */
 
+
 .container {
     margin: 0;
 }
+
 button {
     width: 551px;
     height: 94px;
@@ -58,25 +62,32 @@ button:hover{
 .container input {
     border-radius: 70px;
     background-color: #E1DFDF;
-<<<<<<< Updated upstream
+
     width: 388px;
     height: 48px;
-=======
-    
 
->>>>>>> Stashed changes
     margin-top: 10px;
+
+    width: 388px;
+    height: 48px;
+
+    margin-top: 10px;
+
+
 }
 .container button{
     width: 271px;
     height: 53px;
+
     font-family: 'Rubik';
+
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
     line-height: 28px;
     text-align: center;
 }
+
 
 /* PROFIL CHEF */
 
@@ -92,11 +103,13 @@ button:hover{
     position: relative;
    
 }
-/* .container input {
+
+.container input {
     width: 328px;
     height: 85px;
     margin: 25px;
-} */
+}
+
 
 .card-profil {
     background-image: url(/projet_mybocuse/assets/bgcard.svg);
@@ -173,6 +186,7 @@ button.pointage {
 }
 
 
+
 /* FOOTER */
 
 .footer {
@@ -182,6 +196,7 @@ button.pointage {
     
 }
 .footer img {
+
     padding: 10px 10px;
 }
 
@@ -206,14 +221,11 @@ button.accordion {
   }
   
   button.accordion:after {
-    
-    
+  
     font-size: 14px;
     float: right;
   }
-  
-  
-  
+ 
   button.accordion:hover, button.accordion.is-open {
     background-color: #ddd;
   }
@@ -227,3 +239,7 @@ button.accordion {
     overflow: hidden;
     transition: max-height 0.2s ease-in-out;
   }
+
+
+
+

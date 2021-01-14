@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-=======
+
 <?php
 
     session_start();
@@ -50,8 +49,10 @@ include 'navbar.php';
     <img class="mt-4"src="../assets/paul_bocuse_logo_form.svg">
     <h1 class="title is-size-1 has-text-black">Login</h1>
     <h2 class="subtitle is-size-3 has-text-black">Sign up to your account</h2>
+
         <input class="input-info" type="text" name="email" placeholder="Your email">
         <input class="input-info" type="password" name="pass" placeholder="Your password">
+
         <button class="button is-rounded mt-5" type="submit" value="login" name="submit">Sign up
     </form>
     </div>
@@ -59,5 +60,7 @@ include 'navbar.php';
 include 'footer.php';
 ?>
 </body>
+
 </html>
->>>>>>> Stashed changes
+
+
