@@ -49,12 +49,10 @@ try {
     while ($data = $request->fetch()) {
        
         echo '<div class="container-accordion">';
-        echo' <div class="accordion-content">';
-      
-        echo '<button class="accordion">' . $data['topic_recip'] . '</button>';
-        echo '<p>' . nl2br($data['fullRecipe']) . '-' . $data['date_recip'] . '</p>';
+        echo '<button class="accordion"><i class="fas fa-plus-circle"></i>' . $data['topic_recip'] . '</button>';
+        echo '<div class="panel" style="display: none;">';
+        echo '<p>' . nl2br($data['fullRecipe']) . ' <br>' . $data['date_recip'] . '</p>';
         echo '<p class="subtitle is-6">' . $data['firstname'] . ' ' . $data['lastname'] . '</p>';
-        
         echo '</div>';
         echo '</div>';
        
@@ -76,7 +74,7 @@ catch(Exception $e){
     <?php include 'footer.php'; ?>
 
 
-<scipt src="../accordion.js"></script>
+<script src="../js/accordion.js"></script>
 </body>
 
 </html>

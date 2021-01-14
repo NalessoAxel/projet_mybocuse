@@ -1,16 +1,20 @@
-    const accordions = document.getElementsByClassName("accordion");
+console.log("coucou");
+  
+const acc = document.getElementsByClassName("accordion");
+let i;
 
-    for (let i = 0; i < accordions.length; i++) {
-      accordions[i].onclick = function() {
-        this.classList.toggle('is-open');
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    
+    this.classList.toggle("active");
 
-        let content = this.nextElementSibling;
-        if (content.style.maxHeight) {
-          // accordion is currently open, so close it
-          content.style.maxHeight = null;
-        } else {
-          // accordion is currently closed, so open it
-          content.style.maxHeight = content.scrollHeight + "px";
-        }
-      }
+    
+    let panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
     }
+  });
+}
+

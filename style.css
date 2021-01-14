@@ -6,35 +6,41 @@
 
 body {
     background: #A8A8A8;
-    
+
 
 }
+
 /* NAVBAR */
 
 nav.navbar {
 
     height: 169px;
     background-color: #463F3A;
-   
+
 }
+
 .navbar-brand img {
-    border-radius: 110px 110px 0px 110px;  
+    border-radius: 110px 110px 0px 110px;
 }
+
 .title {
     font-size: 72px;
     color: #FCFBFB;
     line-height: 85px;
     display: flex;
     justify-content: center;
-    
+
 }
+
 .navbar-end {
     margin-right: 50px;
 }
+
 .bigblanc {
     width: 300px;
     height: 300px;
 }
+
 /* CONNEXIONS PAGE */
 
 
@@ -49,12 +55,15 @@ nav.navbar {
     line-height: 28px;
     text-align: center;
 }
-button:hover{
+
+button:hover {
     background-color: #808080;
-    
+    cursor: pointer;
+
 }
+
 /* LOGIN FORM */
-.bgimg{
+.bgimg {
     background-image: url(/projet_mybocuse/assets/form.svg);
     min-height: 590px;
     background-repeat: no-repeat;
@@ -62,14 +71,16 @@ button:hover{
     position: relative;
     margin: 53px 0;
 }
+
 .login {
     border-radius: 70px;
-    background-color: #E1DFDF;  
+    background-color: #E1DFDF;
     width: 388px;
     height: 48px;
     margin-top: 10px;
 }
-.button-signup{
+
+.button-signup {
     width: 271px;
     height: 53px;
     border-radius: 70px;
@@ -80,6 +91,7 @@ button:hover{
     font-size: 24px;
     line-height: 28px;
     text-align: center;
+    cursor: pointer;
 }
 
 
@@ -89,13 +101,14 @@ button:hover{
     flex-grow: initial;
     margin: 0 0;
 }
+
 .card-pointage {
     background-image: url(/projet_mybocuse/assets/bgcard.svg);
     height: 540px;
     width: 440px;
     background-repeat: no-repeat;
     position: relative;
-   
+
 }
 
 .container input {
@@ -110,42 +123,51 @@ button:hover{
     height: 540px;
     width: 440px;
     background-repeat: no-repeat;
-    position: relative;   
+    position: relative;
 }
+
 .card-reciepe {
     background-image: url(/projet_mybocuse/assets/bgcard.svg);
     height: 540px;
     width: 440px;
     background-repeat: no-repeat;
-    position: relative; 
+    position: relative;
 }
+
 h3.title {
     text-decoration: underline;
 }
+
 .container.profil-acces {
     margin-bottom: 62px;
 }
-.modal-card, .modal-content {
-    
+
+.modal-card,
+.modal-content {
+
     overflow: auto;
     position: relative;
-  
+
     top: 30%;
 }
-#page-modal > div.modal-content > div > div > p.title {
+
+#page-modal>div.modal-content>div>div>p.title {
     font-size: 72px;
     line-height: 85px;
     display: flex;
     justify-content: center;
     color: black;
 }
-.button.is-medium{
+
+.button.is-medium {
     width: 300px;
     height: 80px;
     background: #F2F2F2;
     border-radius: 50px;
     margin: 30px 0;
+    cursor: pointer;
 }
+
 .button.is-small {
     background-color: #C4C4C4;
     width: 100px;
@@ -154,12 +176,15 @@ h3.title {
     position: absolute;
     left: 80%;
     bottom: 7%;
+    cursor: pointer;
 }
+
 a {
     color: black;
 }
+
 a:hover {
-    color:#463F3A;
+    color: #463F3A;
 }
 
 /* STUDENT PROFIL */
@@ -169,8 +194,9 @@ a:hover {
     height: 540px;
     width: 440px;
     background-repeat: no-repeat;
-    position: relative; 
+    position: relative;
 }
+
 button.pointage {
     width: 252.68px;
     height: 60px;
@@ -181,21 +207,63 @@ button.pointage {
 
 /* RECIEPES */
 .field {
-    
+
     height: 80px;
 }
+
 .field input {
     border-radius: 70px;
-    background-color: #E1DFDF;  
+    background-color: #E1DFDF;
     width: 288px;
     height: 38px;
     border-radius: 70px;
     margin-top: 10px;
 }
+
 .button-add {
     width: 200px;
     height: 30px;
     border-radius: 70px;
+}
+
+
+/* ACCORDION ALL RECIEPES */
+
+button.accordion {
+    width: 100%;
+    background-color: whitesmoke;
+    border: none;
+    outline: none;
+    text-align: left;
+    padding: 15px 20px;
+    border-radius: 70px;
+    font-size: 22px;
+    color: #444;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+}
+
+button.accordion:after {
+
+    font-size: 14px;
+    float: right;
+}
+
+button.accordion:hover,
+button.accordion.is-open {
+    background-color: #ddd;
+}
+
+.panel {
+    background-color: white;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    margin-top: 15px;
+    padding: 0 20px;
+    border-radius: 20px;
+    font-family: 'rubik', sans-serif;
+    font-size: 18px;    
+    transition: max-height 0.2s ease-in-out;
 }
 
 /* FOOTER */
@@ -204,8 +272,9 @@ button.pointage {
     width: 100%;
     height: 40px;
     background-color: #463F3A;
-    
+
 }
+
 .footer img {
 
     padding: 10px 10px;
@@ -216,42 +285,12 @@ button.pointage {
     max-width: 600px;
     margin: 50px auto;
 
-  }
-  /* ACCORDION ALL RECIEPES */
+}
 
-button.accordion {
-    width: 100%;
-    background-color: whitesmoke;
-    border: none;
-    outline: none;
-    text-align: left;
-    padding: 15px 20px;
-    font-size: 18px;
-    color: #444;
-    cursor: pointer;
-    transition: background-color 0.2s linear;
-  }
-  
-  button.accordion:after {
-  
-    font-size: 14px;
-    float: right;
-  }
- 
-  button.accordion:hover, button.accordion.is-open {
-    background-color: #ddd;
-  }
-  
-  .panel {
-    background-color: white;
-    border-left: 1px solid whitesmoke;
-    border-right: 1px solid whitesmoke;
-    padding: 0 20px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-in-out;
-  }
+/* MEDIA QUERIES */
 
-
-
-
+@media screen and (max-width: 600px) {
+    .title {
+        display: none;
+    }
+}
