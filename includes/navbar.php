@@ -10,11 +10,7 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          
-          <a class="button is-light">
-            Log in
-          </a>
-          <a class="button is-dark">
+          <a class="button is-dark" href="logout.php">
             Log out
           </a>
         </div>
