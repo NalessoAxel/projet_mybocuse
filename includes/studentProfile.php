@@ -27,7 +27,7 @@ include 'navbar.php';
     <p class="ml-2">Hello @username</p>
   </div>
 </section>
- <section class="section is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-space-between">
+ <section class="section is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-space-around">
     
     <div class="container card-pointage-student is-flex is-flex-direction-column is-align-items-center">
         <h3 class="title is-3 has-text-black has-text-centered">Pointages</h3>
