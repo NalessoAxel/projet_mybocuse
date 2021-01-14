@@ -21,31 +21,31 @@
 </section>
 <section class="section is-flex  is-justify-content-center">
     
-    <div class="container card-reciepe is-flex is-flex-direction-column is-align-items-center">
+    <div class="container-reciepes card-reciepe is-flex is-flex-direction-column is-align-items-center">
         <h3 class="title is-3 has-text-black has-text-centered">Add your reciepe here</h3>
         
         <div class="field">
         <label class="label">Topic of the reciepe</label>
         <div class="control">
-        <input class="input reciepe" type="text" placeholder="Topic">
+        <input class="input-reciepe" type="text" placeholder="Topic">
         </div>
         
    </div>
    <div class="field">
         <label class="label">Date</label>
         <div class="control">
-        <input class="input reciepe" type="text" placeholder="13/01/2021">
+        <input class="input-reciepe" type="text" placeholder="13/01/2021">
         </div>
         
    </div>
    <div class="field">
         <label class="label">Your Name</label>
         <div class="control">
-        <input class="input reciepe" type="text" placeholder="Robert De Noël">
+        <input class="input-reciepe" type="text" placeholder="Robert De Noël">
         </div>
         
    </div>
-        <button class="button add">Add reciepe</button>
+        <a href="studentProfile.php"><button class="button-add mt-4">Add reciepe</button></a>
         
     </div> 
 </section>

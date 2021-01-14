@@ -49,16 +49,9 @@ include 'navbar.php';
     <img class="mt-4"src="../assets/paul_bocuse_logo_form.svg">
     <h1 class="title is-size-1 has-text-black">Login</h1>
     <h2 class="subtitle is-size-3 has-text-black">Sign up to your account</h2>
-<<<<<<< HEAD
         <input class="login" type="text" name="email" placeholder="Your email">
         <input class="login" type="password" name="pass" placeholder="Your password">
-=======
-
-        <input class="input-info" type="text" name="email" placeholder="Your email">
-        <input class="input-info" type="password" name="pass" placeholder="Your password">
-
->>>>>>> ee9de1d242a9ee54aeb14f918c40a3c8c14bd1d3
-        <button class="button is-rounded mt-5" type="submit" value="login" name="submit">Sign up
+        <button class="button-signup is-rounded mt-5" type="submit" value="login" name="submit">Sign up
     </form>
     </div>
     <?php 

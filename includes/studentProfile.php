@@ -39,7 +39,7 @@ include 'navbar.php';
     <div class="container card-pointage-student is-flex is-flex-direction-column is-align-items-center">
         <div class="container-title is-flex is-flex-direction-row is-align-items-center">
         <h3 class="title is-3 has-text-black m-0">Reciepe</h3>
-          <i class="fas fa-plus fa-2x ml-4"></i>
+          <a href="recipes.php"><i class="fas fa-plus fa-2x ml-4"></i></a>
         </div>
         <button class="button is-medium" id="button"> Reciepe</button>
             <div class="modal" id="page-modal">

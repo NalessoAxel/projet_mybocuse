@@ -38,11 +38,8 @@ nav.navbar {
 /* CONNEXIONS PAGE */
 
 
-.container {
-    margin: 0;
-}
 
-button {
+.button-connexion {
     width: 551px;
     height: 94px;
 }
@@ -59,26 +56,17 @@ button:hover{
     position: relative;
     margin: 53px 0;
 }
-.container input {
+.login {
     border-radius: 70px;
-    background-color: #E1DFDF;
-
+    background-color: #E1DFDF;  
     width: 388px;
     height: 48px;
-
     margin-top: 10px;
-
-    width: 388px;
-    height: 48px;
-
-    margin-top: 10px;
-
-
 }
-.container button{
+.button-signup{
     width: 271px;
     height: 53px;
-
+    border-radius: 70px;
     font-family: 'Rubik';
 
     font-style: normal;
@@ -185,7 +173,24 @@ button.pointage {
     margin: 50px 0;
 }
 
-
+/* RECIEPES */
+.field {
+    
+    height: 80px;
+}
+.field input {
+    border-radius: 70px;
+    background-color: #E1DFDF;  
+    width: 288px;
+    height: 38px;
+    border-radius: 70px;
+    margin-top: 10px;
+}
+.button-add {
+    width: 200px;
+    height: 30px;
+    border-radius: 70px;
+}
 
 /* FOOTER */
 
@@ -206,7 +211,8 @@ button.pointage {
     margin: 50px auto;
 
   }
-  
+  /* ACCORDION ALL RECIEPES */
+
 button.accordion {
     width: 100%;
     background-color: whitesmoke;

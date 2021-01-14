@@ -25,16 +25,24 @@
   <section class="hero">
 
     <div class="hero-body">
-      <div class="container is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
+      <div class="container-form is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
         <img src="assets/img_connexion_page.svg" alt="paul bocuse profil">
-        <button class="button  is-rounded mt-5">CONNEXIONS</button>
+        <a href="./includes/login-form.php"><button class="button-connexion  is-rounded mt-5">CONNEXIONS</button></a>
       </div>
     </div>
 
   </section>
 
-
-  <?php include 'includes/footer.php'?>
+  <footer class="footer">
+  <div class="container is-flex is-justify-content-flex-start is-align-items-center">
+    <figure class="image is-96x96 ">
+      <img src="./assets/becode_logo.svg" alt="logo becode">
+    </figure>
+    <p class="has-text-white">
+      Fair use disclaimer, this website is for educational purpose only.
+    </p>
+  </div>
+</footer>
 </body>
 
 </html>
