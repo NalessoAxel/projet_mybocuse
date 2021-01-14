@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,6 +23,7 @@
 
 
   <section class="hero">
+
     <div class="hero-body">
       <div class="container is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
         <img src="assets/img_connexion_page.svg" alt="paul bocuse profil">
@@ -31,17 +33,13 @@
 
   </section>
 
-  <footer class="footer">
-    <div class="container is-flex is-justify-content-space-between is-align-items-center">
-      <p class="has-text-white">
-        Fair use disclaimer, this website is for educational purpose only.
-      </p>
-      <figure class="image is-96x96 ">
-        <img src="assets/becode_logo.svg" alt="logo becode">
-      </figure>
-    </div>
 
-  </footer>
+  <?php include 'includes/footer.php'?>
 </body>
 
 </html>
+
+
+
+
+
