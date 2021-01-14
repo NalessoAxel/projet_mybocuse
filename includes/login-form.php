@@ -1,6 +1,9 @@
 <?php
 
     session_start();
+    if (isset($_SESSION['wrongCredentials'])||isset($_SESSION['unknownCredentials'])){
+        unset($_SESSION['wrongCredentials'], $_SESSION['unknownCredentials']);
+    }
     if (isset($_POST['submit'])) {
         $email = $_POST['email'];
         $pass = sha1($_POST['pass']);
@@ -14,17 +17,18 @@
         if ($result->rowCount() > 0) {
             $data = $result->fetchAll();
             if ($pass === $data[0]["passwords"]) {
-                // echo "Login successful";
+                echo "Login successful";
                 $_SESSION['email'] = $email;
             } else {
-                // echo "Login failed, wrong credentials";
+                $_SESSION['wrongCredentials'] = array("Your username or password was incorrect.");
             }
         }
         else{
-            //echo "Unknown credentials";
+            $_SESSION['unknownCredentials'] = array('Unknown credentials. 
+            Please check your credentials or contact your chef.');
+
         }
     }
-
 ?>
 
 
@@ -48,13 +52,31 @@ include 'navbar.php';
     <img class="mt-4"src="../assets/paul_bocuse_logo_form.svg">
     <h1 class="title is-size-1 has-text-black">Login</h1>
     <h2 class="subtitle is-size-3 has-text-black">Sign up to your account</h2>
-        <input type="text" name="email" placeholder="Your email">
-        <input type="password" name="pass" placeholder="Your password">
+        <input type="text" name="email" id="emailInput" placeholder="Your email">
+        <input type="password" name="pass" id="passwordInput" placeholder="Your password">
+        
+        <?php if (isset($_SESSION['wrongCredentials'])): ?>
+            <div class="help form-errors is-danger">
+                <?php foreach($_SESSION['wrongCredentials'] as $error): ?>
+                    <p><?php echo $error ?></p>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
+        <?php if (isset($_SESSION['unknownCredentials'])): ?>
+            <div class="help form-errors is-danger">
+                <?php foreach($_SESSION['unknownCredentials'] as $error): ?>
+                    <p><?php echo $error ?></p>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
+
         <button class="button is-rounded mt-5" type="submit" value="login" name="submit">Sign up
     </form>
     </div>
     <?php 
 include 'footer.php';
+
 ?>
+<!--<script src="../script.js"></script>-->
 </body>
 </html>
