@@ -14,14 +14,25 @@
         if ($result->rowCount() > 0) {
             $data = $result->fetchAll();
             if ($pass === $data[0]["passwords"]) {
-                // echo "Login successful";
+                echo "Login successful";
                 $_SESSION['email'] = $email;
-            } else {
-                // echo "Login failed, wrong credentials";
+                $_SESSION['id'] = $data[0]["id"];
+                $_SESSION['type'] = $data[0]["account_type"];
+                $_SESSION['firstname'] = $data[0]["firstname"];
+                $_SESSION['lastname'] = $data[0]["lastname"];
+                if ($_SESSION['type'] === "chef") {
+                   header("location:chefProfile.php");
+                }
+                else {
+                    header("location:studentProfile.php");
+                }
+            } 
+            else {
+                echo "Login failed, wrong credentials";
             }
         }
         else{
-            //echo "Unknown credentials";
+            echo "Unknown credentials";
         }
     }
 
@@ -40,9 +51,7 @@
 </head>
 
 <body>
-    <?php 
-include 'navbar.php';
-?>
+    <?php include 'navbar.php'; ?>
 
     <div class="bgimg">
 
@@ -56,9 +65,8 @@ include 'navbar.php';
             <button class="button-signup is-rounded mt-5" type="submit" value="login" name="submit">Sign up
         </form>
     </div>
-    <?php 
-include 'footer.php';
-?>
+
+    <?php include 'footer.php'; ?>
 </body>
 
 </html>

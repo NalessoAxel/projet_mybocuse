@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!doctype html>
 <html lang="fr">
 
@@ -20,61 +24,49 @@
             <figure class="image is-96x96">
                 <img class="is-rounded" src="../assets/Ellipse1.svg" alt="profil pic chef">
             </figure>
-            <p class="ml-2">Hello @username</p>
+            <p class="ml-2">Hello <?php echo $_SESSION['firstname']; ?></p>
         </div>
     </section>
-    
 
+    <!-- <div class="media-left">
+        <figure class="image is-128x128">
+            <img class="is-rounded" src="../assets/tiramisu.jpg" alt="Placeholder image">
+        </figure>
+    </div> -->
+
+    <?php
+        //session_start(); //NOTE: nécessaire ou pas ?
+        header('Content-type: text/html; charset=UTF-8');
+        try {
+            include 'dbConnexion.php';
+
+            //if (isset($_SESSION['email'])) {
+            $request = $db->prepare('SELECT recipe.id, recipe.topic_recip, recipe.fullRecipe, recipe.date_recip, recipe.idStudent, people.firstname, people.lastname FROM recipe INNER JOIN people ON recipe.idStudent = people.id /*WHERE id = ? AND topic_recip = ? AND description = ? AND date_recip = ?*/');
+            //if($request){
+            $request->execute();
+
+            while ($data = $request->fetch()) {
         
-            
-                <!-- <div class="media-left">
-                    <figure class="image is-128x128">
-                        <img class="is-rounded" src="../assets/tiramisu.jpg" alt="Placeholder image">
-                    </figure>
-                </div> -->
+            echo '<div class="container-accordion">';
+            echo '<button class="accordion"><i class="fas fa-plus-circle"></i>' . $data['topic_recip'] . '</button>';
+            echo '<div class="panel" style="display: none;">';
+            echo '<p>' . nl2br($data['fullRecipe']) . ' <br>' . $data['date_recip'] . '</p>';
+            echo '<p class="subtitle is-6">' . $data['firstname'] . ' ' . $data['lastname'] . '</p>';
+            echo '</div>';
+            echo '</div>';
+        
+            }
+        //}
+        //}
+        }
 
-                <?php
-//session_start(); //NOTE: nécessaire ou pas ?
-header('Content-type: text/html; charset=UTF-8');
-try {
-    include 'dbConnexion.php';
-
-    //if (isset($_SESSION['email'])) {
-
-    $request = $db->prepare('SELECT recipe.id, recipe.topic_recip, recipe.fullRecipe, recipe.date_recip, recipe.idStudent, people.firstname, people.lastname FROM recipe INNER JOIN people ON recipe.idStudent = people.id /*WHERE id = ? AND topic_recip = ? AND description = ? AND date_recip = ?*/');
-    //if($request){
-
-    $request->execute();
-
-    while ($data = $request->fetch()) {
-       
-        echo '<div class="container-accordion">';
-        echo '<button class="accordion"><i class="fas fa-plus-circle"></i>' . $data['topic_recip'] . '</button>';
-        echo '<div class="panel" style="display: none;">';
-        echo '<p>' . nl2br($data['fullRecipe']) . ' <br>' . $data['date_recip'] . '</p>';
-        echo '<p class="subtitle is-6">' . $data['firstname'] . ' ' . $data['lastname'] . '</p>';
-        echo '</div>';
-        echo '</div>';
-       
-       
-    }
-
-    //}
-    //}
-
-}
-catch(Exception $e){
-    die('Error: '.$e->getMessage());
-}
-?>
-
-
-
+        catch(Exception $e){
+            die('Error: '.$e->getMessage());
+        }
+    ?>
 
     <?php include 'footer.php'; ?>
-
-
-<script src="../js/accordion.js"></script>
+    <script src="../js/accordion.js"></script>
 </body>
 
 </html>
