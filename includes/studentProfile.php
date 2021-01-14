@@ -41,15 +41,16 @@ include 'navbar.php';
         <button class="button pointage">ARRIVAL</button>
         <button class="button pointage">DEPARTURE</button>
         
-    </div> 
+    </div>
+
     <div class="container card-reciepe  is-flex is-flex-direction-column is-align-items-center">
             <h3 class="title is-3 has-text-black">Receipes</h3>
             <?php
             include 'dbConnexion.php';
-            $student = $_SESSION['id'];
-            $request = $db->prepare('SELECT recipe.id, recipe.topic_recip, recipe.description,  recipe.date_recip, recipe.idStudent, people.firstname, people.lastname FROM recipe INNER JOIN people ON recipe.idStudent = $student ORDER BY recipe.id DESC LIMIT 3');
 
-            $request->execute();
+            $request = $db->prepare('SELECT recipe.id, recipe.topic_recip, recipe.description,  recipe.date_recip, recipe.idStudent, people.firstname, people.lastname FROM recipe INNER JOIN people ON recipe.idStudent = people.id WHERE recipe.idStudent = ? ORDER BY recipe.id DESC LIMIT 3');
+
+            $request->execute(array($_SESSION['id']));
 
             while ($data = $request->fetch()) {
 
@@ -62,7 +63,7 @@ include 'navbar.php';
                               <p class="title ">' . $data['topic_recip'] . '</p>';
                 echo '<p class="subtitle">' . $data['description'] .
                               '</p>';
-                echo '<p> ' . $data['firstname'] . ' ' . $data['lastname'] .           '</p>';
+                /*echo '<p> ' . $data['firstname'] . ' ' . $data['lastname'] .           '</p>';*/
                 echo '<button class="button is-small"><a href="allRecipes.php">See full reciepe</a></button>
 
                             </div>
@@ -76,7 +77,6 @@ include 'navbar.php';
         </div>
 
 </section>
-
 
 <?php 
 include 'footer.php';
