@@ -1,4 +1,3 @@
-<!--TODO: move head, header & footer to a more general page. "Profile" page and include specific profiles to that one page ? -->
 <?php
     session_start();
 ?>
@@ -65,82 +64,41 @@
             </div>
                   
         </div>
-        <div class="container card-reciepe  is-flex is-flex-direction-column is-align-items-center"> 
-            <h3 class="title is-3 has-text-black">Receipe</h3>
 
-            <button class="button is-medium" id="button"> Reciepe</button>
-            <div class="modal" id="page-modal">
-            <div class="modal-background"></div>
+        <div class="container card-reciepe  is-flex is-flex-direction-column is-align-items-center">
+            <h3 class="title is-3 has-text-black">Receipes</h3>
+            <?php
+            include 'dbConnexion.php';
+
+            $request = $db->prepare('SELECT recipe.id, recipe.topic_recip, recipe.description,  recipe.date_recip, recipe.idStudent, people.firstname, people.lastname FROM recipe INNER JOIN people ON recipe.idStudent = people.id ORDER BY recipe.id DESC LIMIT 3');
+
+            $request->execute();
+
+            while ($data = $request->fetch()) {
+
+                echo '<button class="button is-medium modal-open" id="button">' . $data['topic_recip'] .'</button>';
+                echo '<div class="modal" id="page-modal">
+            <div class="modal-background" id="modal-bg"></div>
             <div class="modal-content">
             <div class="card">
                             <div class="card-content">
-                              <p class="title">
-                                "Here the title of the reciepe"
-                              </p>
-                              <p class="subtitle">
-                              "Name of the student"
-                              </p>
-                              <p> 
-                                
-                                "Here the date of the reciepe" 
+                              <p class="title">' . $data['topic_recip'] . '</p>';
+                echo '<p class="subtitle">' . $data['description'] .
+                              '</p>';
+                echo '<p> ' . $data['firstname'] . ' ' . $data['lastname'] .           '</p>';
+                echo '<button class="button is-small">See full reciepe</button>
 
-                              </p>
-                              <button class="button is-small">See full reciepe</button>
                             </div>
                       </div>
             </div>
-            <button class="modal-close is-large" aria-label="close"></button>
-            </div>
-            <button class="button is-medium" id="button2">Reciepe</button>
-            <div class="modal" id="page-modal2">
-            <div class="modal-background"></div>
-            <div class="modal-content">
-            <div class="card">
-                            <div class="card-content">
-                              <p class="title">
-                                "Here the title of the reciepe"
-                              </p>
-                              <p class="subtitle">
-                              "Name of the student"
-                              </p>
-                              <p> 
-                                
-                                "Here the date of the reciepe" 
+            <button class="modal-close is-large" id="modal-close" aria-label="close"></button>
+            </div>';
+            }
 
-                              </p>
-                              <button class="button is-small">See full reciepe</button>
-                            </div>
-                      </div>
-            </div>
-            <button class="modal-close is-large" aria-label="close"></button>
-            </div>
-            <button class="button is-medium" id="button3">Reciepe</button>
-            <div class="modal" id="page-modal3">
-            <div class="modal-background"></div>
-            <div class="modal-content">
-            <div class="card">
-                            <div class="card-content">
-                              <p class="title">
-                                "Here the title of the reciepe"
-                              </p>
-                              <p class="subtitle">
-                              "Name of the student"
-                              </p>
-                              <p> 
-                                
-                                "Here the date of the reciepe" 
-
-                              </p>
-                              <button class="button is-small">See full reciepe</button>
-                            </div>
-                      </div>
-            </div>
-            <button class="modal-close is-large" aria-label="close"></button>
-            </div>
-        
+            ?>
         </div>
     </div>
-    </section>
+  </section>
 
 
 
