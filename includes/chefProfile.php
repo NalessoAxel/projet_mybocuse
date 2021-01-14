@@ -70,12 +70,12 @@
             $request = $db->prepare('SELECT recipe.id, recipe.topic_recip, recipe.description,  recipe.date_recip, recipe.idStudent, people.firstname, people.lastname FROM recipe INNER JOIN people ON recipe.idStudent = people.id ORDER BY recipe.id DESC LIMIT 3');
 
             $request->execute();
-            $modal_iterator = 0;
+
             while ($data = $request->fetch()) {
 
-                echo '<button class="button is-medium modal-open" id="button'. $modal_iterator .'">' . $data['topic_recip'] .'</button>';
-                echo '<div class="modal" id="page-modal' . $modal_iterator . '">
-            <div class="modal-background" id="modal-bg' . $modal_iterator . '"></div>
+                echo '<button class="button is-medium modal-open" id="button">' . $data['topic_recip'] .'</button>';
+                echo '<div class="modal" id="page-modal">
+            <div class="modal-background" id="modal-bg"></div>
             <div class="modal-content">
             <div class="card">
                             <div class="card-content">
@@ -87,9 +87,8 @@
                             </div>
                       </div>
             </div>
-            <button class="modal-close is-large" id="modal-close' . $modal_iterator . '" aria-label="close"></button>
+            <button class="modal-close is-large" id="modal-close" aria-label="close"></button>
             </div>';
-                $modal_iterator ++;
             }
 
             ?>
