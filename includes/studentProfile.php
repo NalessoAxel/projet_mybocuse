@@ -44,7 +44,10 @@ include 'navbar.php';
     </div>
 
     <div class="container card-reciepe  is-flex is-flex-direction-column is-align-items-center">
-            <h3 class="title is-3 has-text-black">Receipes</h3>
+        <div class="container-title is-flex is-flex-direction-row is-align-items-center">
+        <h3 class="title is-3 has-text-black">Receipes</h3>
+        <a href="recipes.php"><i class="fas fa-plus fa-2x ml-4"></i></a>
+        </div>
             <?php
             include 'dbConnexion.php';
 
