@@ -8,13 +8,18 @@
     
     <p class="title is-justify-content-center">My Bocuse</p>
     <div class="navbar-end">
-      <div class="navbar-item">
+
+        <?php
+        if (isset($_SESSION['id'])){
+            echo '<div class="navbar-item">
         <div class="buttons">
           <a class="button is-dark" href="logout.php">
             Log out
           </a>
         </div>
-      </div>
+      </div>';
+        }
+        ?>
     </div>
     </div>
   </nav>
