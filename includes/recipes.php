@@ -12,9 +12,10 @@
 
         include 'dbConnexion.php';
 
-        $sql = "INSERT INTO recipe (topic_recip, description, fullRecipe, date_recip, idStudent) VALUES ('$titre', '$description', '$ingredien', '$date', '$idstudent')";
+        $sql = "INSERT INTO recipe (topic_recip, description, fullRecipe, date_recip, idStudent) VALUES ('$titre', '$description', '$ingredient', '$date', '$idstudent')";
         $req = $db->prepare($sql);
-        $req->execute(); 
+        $req->execute();
+        header('Location: studentProfile.php');
 
     }
 
@@ -45,7 +46,8 @@
     
     <div class="container-reciepes card-reciepe is-flex is-flex-direction-column is-align-items-center">
         <h3 class="title is-3 has-text-black has-text-centered">Add your reciepe here</h3>
-        
+
+        <form method="post" action="">
         <div class="field">
         <label class="label">Topic of the reciepe</label>
         <div class="control">
@@ -70,7 +72,7 @@
 
         
 
-        <textarea class="input-reciepe" type="text" name="ingredient" placeholder="Ingredients and preparation" ></textarea>
+        <input class="input-reciepe" type="text" name="ingredient" placeholder="Ingredients and preparation" >
 
         </div>        
    </div>
@@ -84,8 +86,9 @@
 
         </div>
     </div>
-        <a href="studentProfile.php"><button class="button-add mt-4">Add reciepe</button></a>
-        
+        <button type="submit" name="submit" class="button-add mt-4" >Add
+                reciepe</button>
+        </form>
     </div> 
 </section>
     <?php include 'footer.php'; ?>
