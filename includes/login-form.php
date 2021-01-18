@@ -52,8 +52,9 @@
 <body>
     <?php include 'navbar.php'; ?>
 
+    <section class="hereo has-bg-img-login">
 
-<div class="bgimg">
+
     
     <form action="" method="post" class="container-login is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
     <img class="mt-4"src="../assets/paul_bocuse_logo_form.svg">
@@ -74,12 +75,13 @@
                 <?php foreach($_SESSION['unknownCredentials'] as $error): ?>
                     <p><?php echo $error ?></p>
                 <?php endforeach; ?>
-            </div>
+            
         <?php endif; ?>
 
         <button class="button is-rounded mt-5" type="submit" value="login" name="submit">Sign up
     </form>
     </div>
+                </section>
     <?php 
 include 'footer.php';
 

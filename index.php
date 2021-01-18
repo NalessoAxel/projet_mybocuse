@@ -21,7 +21,8 @@
   </nav>
 
 
-  <section class="hero">
+  <section class="hero has-bg-img-index">
+    
 
     <div class="hero-body">
       <div class="container-form is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
@@ -29,7 +30,7 @@
         <a href="./includes/login-form.php"><button class="button-connexion  is-rounded mt-5">CONNEXIONS</button></a>
       </div>
     </div>
-
+    
   </section>
 
   <footer class="footer">
